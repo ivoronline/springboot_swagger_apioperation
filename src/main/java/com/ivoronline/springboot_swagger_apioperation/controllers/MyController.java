@@ -12,7 +12,11 @@ public class MyController {
   //=========================================================================
   // HELLO
   //=========================================================================
-  @ApiOperation(value = "This Endpoint says Hello")
+  @ApiOperation(
+    value  = "This Endpoint says Hello",
+    notes  = "It returns following string: Hello from Endpoint",
+    hidden = false
+  )
   @GetMapping("Hello")
     String hello() {
     return "Hello from Endpoint";
